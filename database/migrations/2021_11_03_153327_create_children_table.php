@@ -16,7 +16,7 @@ class CreateChildrenTable extends Migration
         Schema::create('children', function (Blueprint $table) {
             $table->increments('id')->index();
             $table->integer('user_id')->index();
-            $table->string('child_name')->length(32)->nullable()->charset("utf8")->comment('子どもの名前');
+            $table->string('child_name')->length(32)->nullable()->comment('子どもの名前');
             $table->integer('birthyear')->length(4)->nullable()->comment('誕生年');
             $table->integer('birthmonth')->length(2)->nullable()->comment('誕生月');
             $table->integer('birthday')->length(2)->nullable()->comment('誕生日');
