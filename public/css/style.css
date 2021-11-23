@@ -1,0 +1,2005 @@
+@charset "utf-8";
+
+/*全端末（PC・タブレット・スマホ）共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*cssファイルの読み込み
+---------------------------------------------------------------------------*/
+
+/* @import url("keyframes.css"); */
+
+/*Google Fontsの読み込み
+---------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #545454;
+    /*全体の文字色*/
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    /*フォント種類*/
+    font-size: 15px;
+    /*文字サイズ*/
+    line-height: 2.5;
+    /*行間*/
+    background: #f7f4f0;
+    /*背景色*/
+    -webkit-text-size-adjust: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+figure,
+form {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 100%;
+    border-spacing: 0;
+}
+
+iframe {
+    width: 100%;
+}
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+
+a {
+    color: #545454;
+    /*リンクテキストの色*/
+    transition: 0.5s;
+    /*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+}
+
+a:hover {
+    color: #ffbbbb;
+    /*マウスオン時の文字色*/
+    text-decoration: none;
+    /*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
+}
+
+/*コンテナー（サイト全体を囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+    max-width: 1400px;
+    /*最大幅。これ以上広くならない指定。*/
+    margin: 0 auto;
+}
+
+/*ヘッダー（一番上の、ロゴやスライドショーが入っているブロック）
+---------------------------------------------------------------------------*/
+/*ヘッダーブロック*/
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/*トップページのヘッダーブロックへの追加指定*/
+.home header {
+    padding: 0;
+    position: relative;
+}
+
+/*ロゴ画像*/
+header #logo img {
+    width: 25%;
+    /*画像の幅*/
+}
+
+/*トップページのロゴ画像への追加指定*/
+.home header #logo img {
+    position: absolute;
+    z-index: 1;
+    width: 22%;
+    /*画像の幅*/
+    left: 13%;
+    /*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
+    top: 20px;
+    /*ロゴやメニューが入っているブロックに対して、上からの配置場所の指定。*/
+}
+
+/*メニュー
+---------------------------------------------------------------------------*/
+/*メニューブロック全体への指定*/
+#menubar {
+    line-height: 2;
+    text-align: center;
+    font-size: 18px;
+    /*文字サイズ*/
+}
+
+/*メニュー１個あたりの指定*/
+#menubar li {
+    display: inline-block;
+    /*横並びにする指定*/
+    margin: 0px 5px;
+    /*上下、左右へのメニューの外側にとる余白*/
+}
+
+#menubar li a {
+    text-decoration: none;
+    display: block;
+    padding: 0px 20px;
+    /*上下、左右へのメニューの内側にとる余白*/
+}
+
+/*現在表示中(current)と、マウスオン時の指定*/
+#menubar li.current a,
+#menubar li a:hover {
+    background: #ffbbbb;
+    /*背景色*/
+    color: #fff;
+    /*文字色*/
+    border-radius: 100px;
+    /*角丸のサイズ。大きめであれば適当で構いません。この１行を削除すると、長方形になります。*/
+}
+
+/*コンテンツ（ヘッダーとフッター以外を囲むブロック）
+---------------------------------------------------------------------------*/
+#contents {
+    overflow: hidden;
+    padding: 50px 3%;
+    /*上下、左右へのブロック内の余白*/
+}
+
+/*コンテンツ内にあるh2(見出し)タグの指定*/
+#contents h2 {
+    clear: both;
+    margin-bottom: 30px;
+    font-size: 24px;
+    /*文字サイズ*/
+    text-align: center;
+    /*文字をセンタリング*/
+    letter-spacing: 0.1em;
+    /*文字間隔を少しだけ広くする指定*/
+}
+
+#contents h2 span {
+    display: inline-block;
+    background: url(../images/line1.png) repeat-x center bottom / auto 2px;
+    /*下線画像の読み込み。2pxは画像の高さの指定。*/
+    padding: 0px 30px;
+    /*上下、左右への余白。文字の両サイドをここで空ける分だけ、下線が見えます。*/
+}
+
+
+/*コンテンツ内にあるh3(見出し)タグの指定*/
+
+#contents h3 {
+    clear: both;
+    margin-bottom: 30px;
+    font-size: 18px;
+    /*文字サイズ*/
+    text-align: center;
+    /*文字をセンタリング*/
+}
+
+
+/*コンテンツ内にあるp(段落)タグ設定*/
+
+#contents p {
+    padding: 0px 20px 30px;
+    /*上、左右、下への余白*/
+}
+
+
+/*他。微調整。*/
+
+#contents p+p {
+    margin-top: -5px;
+}
+
+#contents h2+p,
+#contents h3+p {
+    margin-top: -10px;
+}
+
+
+/*listブロック
+---------------------------------------------------------------------------*/
+
+/*各ブロックごとの設定*/
+
+.list {
+    overflow: hidden;
+    font-size: 90%;
+    /*文字サイズ*/
+    margin-bottom: 30px;
+    /*ブロックの下に空けるスペース*/
+}
+
+
+/*各ブロックごとの設定（サムネイルタイプへの追加指定）*/
+
+.list.thumb {
+    width: 23%;
+    /*画像幅*/
+    margin: 0 1% 30px;
+    padding-top: 1%;
+    float: left;
+    /*画像を左に回り込み*/
+    text-align: center;
+}
+
+
+/*画像の設定*/
+.list img {
+    border-radius: 50%;
+    /*円形にする指定*/
+    width: 20%;
+    /*画像の幅*/
+    float: left;
+    /*画像を左に回り込み*/
+    margin-right: 3%;
+    /*画像の右に空けるスペース*/
+}
+
+/*画像の設定（サムネイルタイプへの追加指定）*/
+.list.thumb img {
+    margin: 0;
+    float: none;
+    width: 60%;
+    /*画像の幅*/
+}
+
+
+/*マウスオン事*/
+
+.list a:hover img {
+    transition: 0.5s;
+    opacity: 0.7;
+    /*透明度。70%色が出た状態。*/
+}
+
+
+/*マウスオン事（サムネイルタイプへの追加指定）*/
+
+.list.thumb a:hover img {
+    transform: scale(1.05);
+    /*ほんの少し画像を大きくする指定*/
+}
+
+
+/*h4タグ*/
+
+.list h4 {
+    font-size: 140%;
+    /*文字サイズ*/
+}
+
+
+/*h4タグ（サムネイルタイプへの追加指定）*/
+
+.list.thumb h4 {
+    font-size: 100%;
+    /*文字サイズ*/
+}
+
+
+/*p(段落)タグ*/
+
+.list p {
+    padding: 0 !important;
+    line-height: 2;
+}
+
+
+/*option1（productページのブロックの右上に斜めに配置している帯）
+---------------------------------------------------------------------------*/
+
+.option1 {
+    text-align: center;
+    display: block;
+    width: 300px;
+    /*幅*/
+    position: absolute;
+    right: 0px;
+    /*ボックスに対して右から0pxの場所に配置*/
+    top: 0px;
+    /*ボックスに対して上から0pxの場所に配置*/
+    transform: rotate(45deg) translate(93px, -45px);
+    /*45度回転。右へ,下へ(マイナス設定なので上へ向けての指定)の移動距離*/
+    background: #f38080;
+    /*背景色*/
+    color: #fff;
+    /*文字色*/
+    letter-spacing: 0.1em;
+    /*文字間隔をほんの少し広くとる*/
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.15);
+    /*ボックスの影。右へ、下へ、ぼかし幅、0.15は色が15%出た状態の事。*/
+}
+
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    font-size: 90%;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #545454;
+}
+
+footer .pr {
+    display: block;
+}
+
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+
+
+/*ブロック全体の設定*/
+
+#new dl {
+    height: 140px;
+    /*高さ。内様がこれを超えるとスクロールバーが出ます。*/
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+
+/*日付設定*/
+
+#new dt {
+    float: left;
+    width: 9em;
+    letter-spacing: 0.1em;
+}
+
+
+/*記事設定*/
+
+#new dd {
+    padding-left: 9em;
+}
+
+
+/*box1指定（角丸のボックス）
+---------------------------------------------------------------------------*/
+
+.box1 {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 40px;
+    /*上下、左右へのボックス内の余白*/
+    border-radius: 30px;
+    /*角丸のサイズ。この１行を削除すると、通常の長方形になります。*/
+    margin-bottom: 30px;
+    /*下に空けるスペース*/
+    background: rgb(252, 250, 245);
+    /*背景色*/
+}
+
+
+/*bg1タイプの背景色*/
+
+.bg1 {
+    background: #ede9e2;
+    /*背景色*/
+}
+
+
+/*bg2タイプの背景色*/
+
+.bg2 {
+    background: transparent;
+    /*背景を透明にする*/
+    border: 2px dashed #545454;
+    /*枠線の幅、線種、色*/
+}
+
+
+/*テーブル
+---------------------------------------------------------------------------*/
+
+
+/*テーブル１行目に入った見出し部分（※caption）*/
+
+.ta1 caption {
+    border-top: 1px solid #545454;
+    /*下の線の幅、線種、色*/
+    text-align: center;
+    /*文字をセンタリング*/
+    padding: 10px;
+    /*ボックス内の余白*/
+    background: rgba(0, 0, 0, 0.03);
+    /*背景色。0,0,0は黒の事で0.03は色が3%出た状態の事。*/
+}
+
+
+/*テーブル１行目に入った見出し部分（※tamidashi）*/
+
+.ta1 th.tamidashi {
+    width: auto;
+    text-align: center;
+    /*文字をセンタリング*/
+}
+
+
+/*ta1テーブルブロック設定*/
+
+.ta1 {
+    table-layout: fixed;
+    width: 100%;
+    margin: 0 auto 30px;
+    border-top: 1px solid #545454;
+    /*上の線の幅、線種、色*/
+}
+
+.ta1,
+.ta1 td,
+.ta1 th {
+    word-break: break-all;
+    border-bottom: 1px solid #545454;
+    /*各行の下線の幅、線種、色*/
+    padding: 10px;
+    /*テーブル内の余白*/
+}
+
+
+/*テーブルの左側ボックス*/
+
+.ta1 th {
+    text-align: center;
+    /*センタリング*/
+    width: 25%;
+    /*幅*/
+}
+
+
+/*btn
+---------------------------------------------------------------------------*/
+
+
+
+
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+
+body .nav-fix-pos-pagetop a {
+    display: none;
+}
+
+body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    position: fixed;
+    animation-name: opa1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 80px;
+    /*ボタンの幅*/
+    line-height: 80px;
+    /*ボタンの高さ*/
+    bottom: 50px;
+    /*画面の下からの配置場所指定*/
+    right: 3%;
+    /*画面の右からの配置場所指定*/
+    background: rgba(255, 255, 255, 0.5);
+    /*背景色*/
+    border: 1px dashed #ccc;
+    /*枠線の幅、線種、色*/
+    border-radius: 50%;
+    /*円形にする指定。この１行を削除すると正方形になります。*/
+}
+
+
+/*マウスオン時*/
+
+body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
+    background: #fff;
+    /*背景色*/
+    border: 1px dashed #ffbbbb;
+    /*枠線の幅、線種、色*/
+}
+
+/* ログインページ
+-------------------------------------------------------------------------- */
+.login .center,
+.signup .center,
+.pass_reset .center{
+    text-align: center;
+}
+
+.login .center a,
+.signup .center a,
+.pass_reset .center a{
+    color: #fd9494;
+    letter-spacing: .2rem;
+}
+
+.login form{
+    border: 1px solid #4b4a4a;
+    margin-bottom: 10px;
+}
+
+.login form .form{
+    width: 70%;
+    margin: 0 auto;
+    border: none;
+}
+
+.login form input[type="email"],
+.login form input[type="password"],
+.signup form input[type="email"],
+.signup form input[type="password"],
+.pass_reset form input[type="password"],
+.pass_reset form input[type="email"]{
+    padding: 5px;
+    border: 1px solid #ede9e2;
+}
+
+.login form input[type="email"]:hover,
+.login form input[type="password"]:hover,
+.signup form input[type="email"]:hover,
+.signup form input[type="password"]:hover,
+.pass_reset form input[type="password"]:hover,
+.pass_reset form input[type="email"]:hover{
+    background: #fff0f0;
+    
+}
+
+.login form input[type="submit"],
+.signup form input[type="submit"],
+.pass_reset form input[type="submit"]{
+    width: 40%;
+    color: #fff;
+    background:#ffbbbb;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 0px 0;
+    border: 1px solid #F28888;
+    border-radius: 40px;
+}
+
+.signup form input[type="submit"]{
+    padding: 0;
+    margin-top: 0;
+}
+
+.login form input[type="submit"]:hover,
+.signup form input[type="submit"]:hover,
+.pass_reset form input[type="submit"]:hover,
+.pass_resetform form input[type="submit"]:hover{
+    background: #fff;
+    color: #F28888;
+    border: 1px solid #F28888;
+}
+
+/* 会員登録ページ
+-------------------------------------------------------------------------- */
+.signup .usernameWrapper{
+    width: 70%;
+    margin:  0 auto;
+}
+
+.signup .usernameWrapper input{
+    margin-bottom: 10px;
+}
+
+.signup .btnWrapper{
+    text-align: center;
+}
+
+.signup .btnWrapper{
+    text-align: center;
+}
+
+.signup .btnWrapper .btn_submit{
+    background: #000;
+}
+
+/* パスワード発行ページ
+-------------------------------------------------------------------------- */
+.pass_reset form{
+    border: 1px solid #333;
+}
+
+.pass_reset .form{
+    width: 70%;
+    border: none;
+}
+
+.pass_reset form input[type="submit"],
+.pass_resetform form input[type="submit"]{
+    width: 40%;
+    color: #fff;
+    background:#ffbbbb;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px 0;
+    border: 1px solid #F28888;
+    border-radius: 40px;
+}
+
+/* パスワード発行フォーム
+-------------------------------------------------------------------------- */
+.pass_resetform form{
+    border: 1px solid #aaa;
+}
+
+.pass_resetform .form{
+    border: none;
+    width: 70%;
+}
+
+
+
+
+
+/*トップページのNEWアイコン
+---------------------------------------------------------------------------*/
+.newicon {
+    font-size: 70%;
+    display: inline-block;
+    line-height: 1.5;
+    padding: 2px 5px;
+    border-radius: 2px;
+    margin: 0px 5px;
+    vertical-align: text-top;
+    background: #F00;
+    /*背景色*/
+    color: #FFF;
+    /*文字色*/
+}
+
+/*ul.disc,olタグ
+---------------------------------------------------------------------------*/
+ul.disc {
+    list-style: disc;
+    padding: 0 20px 30px 42px;
+}
+
+ol {
+    padding: 0 20px 30px 42px;
+}
+
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.mb15,
+.mb1em {
+    margin-bottom: 15px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.clear {
+    clear: both;
+}
+
+.color1,
+.color1 a {
+    color: #f38080;
+}
+
+.pr {
+    font-size: 10px;
+}
+
+.wl {
+    width: 96%;
+}
+
+.ws {
+    width: 50%;
+}
+
+.c {
+    text-align: center;
+}
+
+.r {
+    text-align: right;
+}
+
+.l {
+    text-align: left;
+}
+
+.big1 {
+    font-size: 40px;
+    letter-spacing: 0.2em;
+}
+
+.mini1 {
+    font-size: 11px;
+}
+
+
+/*画面幅600px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width:600px) {
+    /*全体の設定
+---------------------------------------------------------------------------*/
+    body {
+        font-size: 12px;
+        font-size: 2.93vw;
+    }
+    /*ヘッダー（一番上の、ロゴやスライドショーが入っているブロック）
+---------------------------------------------------------------------------*/
+    /*ロゴ画像*/
+    header #logo img {
+        width: 200px;
+        /*画像の幅*/
+    }
+    /*メニュー
+---------------------------------------------------------------------------*/
+    /*メニューブロック全体への指定*/
+    #menubar {
+        font-size: 100%;
+    }
+    #menubar li a {
+        padding: 0px 5px;
+        /*上下、左右へのメニューの内側にとる余白*/
+    }
+    /*listブロック
+---------------------------------------------------------------------------*/
+    /*画像の設定（サムネイルタイプへの追加指定）*/
+    .list.thumb img {
+        width: 90%;
+        /*画像の幅*/
+    }
+    /*box1指定（角丸のボックス）
+---------------------------------------------------------------------------*/
+    .box1 {
+        padding: 10px 20px;
+        /*上下、左右へのボックス内の余白*/
+        border-radius: 20px;
+        /*角丸のサイズ*/
+    }
+    /*テーブル（ta1）
+---------------------------------------------------------------------------*/
+    /*ta1の左側ボックス*/
+    .ta1 th {
+        width: 100px;
+    }
+}
+
+
+/*画面幅480px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width:480px) {
+    /*ヘッダー（一番上の、ロゴやスライドショーが入っているブロック）
+---------------------------------------------------------------------------*/
+    /*トップページのロゴ画像への追加指定*/
+    .home header #logo img {
+        width: 30%;
+        /*画像の幅*/
+        left: 10%;
+        /*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
+        top: 3px;
+        /*ロゴやメニューが入っているブロックに対して、上からの配置場所の指定。*/
+    }
+    /*コンテンツ（ヘッダーとフッター以外を囲むブロック）
+---------------------------------------------------------------------------*/
+    #contents {
+        padding: 30px 3%;
+    }
+    /*コンテンツ内にあるh2(見出し)タグの指定*/
+    #contents h2 {
+        font-size: 16px;
+        /*文字サイズ*/
+    }
+    /*コンテンツ内にあるh3(見出し)タグの指定*/
+    #contents h3 {
+        font-size: 14px;
+        /*文字サイズ*/
+    }
+    /*コンテンツ内にあるp(段落)タグ設定*/
+    #contents p {
+        padding: 0px 10px 30px;
+        /*上、左右、下への余白*/
+    }
+    /*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+    body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+        width: 50px;
+        /*ボタンの幅*/
+        line-height: 50px;
+        /*ボタンの高さ*/
+    }
+    /*ul.disc,olタグ
+---------------------------------------------------------------------------*/
+    ul.disc {
+        padding: 0 10px 20px 25px;
+    }
+    ol {
+        padding: 0 10px 20px 25px;
+    }
+    /*その他
+---------------------------------------------------------------------------*/
+    .big1 {
+        font-size: 20px;
+    }
+    .mini1 {
+        font-size: 9px;
+    }
+    .sh {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .ws,
+    .wl {
+        width: 94%;
+    }
+    .fl {
+        float: none;
+    }
+    .fr {
+        float: none;
+    }
+}
+
+
+/*ログインフォーム
+---------------------------------------------------------------------------*/
+
+.form {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #9c9c9c;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.label_left {
+    display: inline-block;
+    width: 25%;
+    border-left: solid 5px #5250e0;
+    padding-left: 15px;
+    vertical-align: top;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="email"],
+.form input[type="password"] {
+    width: 65%;
+}
+
+.form textarea {
+    padding: 10px;
+    height: 100px;
+    font-size: 14px;
+    width: 65%;
+}
+
+.form select {
+    height: 35px;
+    width: 65%;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+
+.form input[type="reset"] {
+    background: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+/* mypage tab 
+---------------------------------------------------------------------------*/
+.message-user {
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 125%;
+    margin-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 0;
+}
+
+.contCaption {
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: rgb(228, 26, 39);
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.contSubCaption {
+    color: #F28888;
+    font-size: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: normal;
+    letter-spacing: .2em;
+}
+
+.mypage-read {
+    background-color: #F7F6F0;
+    padding: 0 20px;
+    line-height: 50px;
+    margin-bottom: 31px;
+    color: #999;
+    font-size: 25px;
+    font-weight: normal;
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.tab-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    margin: auto;
+}
+
+.tab-wrap:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #ffbbbb;
+    display: block;
+    order: -1;
+}
+
+.tab-label {
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: White;
+    background: LightGray;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px .5em;
+    order: -1;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    flex: 1;
+    font-size: 150%;
+}
+
+.tab-label:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.tab-content {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.tab-switch:checked+.tab-label {
+    background: #ffbbbb;
+}
+
+.tab-switch:checked+.tab-label+.tab-content {
+    height: auto;
+    overflow: auto;
+    padding: 15px;
+    opacity: 1;
+    transition: .5s opacity;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    font-size: 200%;
+}
+
+.tab-switch {
+    display: none;
+}
+
+
+/* mypage button ---------------------------------------------------------------------------*/
+
+.button {
+    background: rgb(228, 26, 39);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: "Nico Moji";
+    font-size: 0.9em;
+    height: 65px;
+    letter-spacing: 0.2px;
+    line-height: 65px;
+    text-transform: uppercase;
+    text-align: center;
+    user-select: none;
+    width: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 480px;
+}
+
+.button a {
+    color: #FFF;
+    /*リンクテキストの色*/
+    transition: 0.5s;
+    /*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.button:hover {
+    background: rgb(252, 36, 51);
+}
+
+.button:active {
+    box-shadow: inset 0px 2px 8px -1px rgb(228, 26, 39);
+}
+
+.fancy-button {
+    margin: auto;
+    position: relative;
+}
+
+.frills,
+.frills:after,
+.frills:before {
+    position: absolute;
+    background: rgb(228, 26, 39);
+    border-radius: 4px;
+    height: 8px;
+}
+
+.frills:after,
+.frills:before {
+    content: "";
+    display: block;
+}
+
+.frills:before {
+    bottom: 45px;
+}
+
+.frills:after {
+    top: 45px;
+}
+
+.left-frills {
+    right: 164px;
+    top: 28.5px;
+    margin-right: 540px;
+}
+
+.active .left-frills {
+    animation: move-left 0.38s ease-out, width-to-zero 0.38s ease-out;
+}
+
+.left-frills:before,
+.left-frills:after {
+    left: 15px;
+}
+
+.active .left-frills:before {
+    animation: width-to-zero 0.38s ease-out, move-up 0.38s ease-out;
+}
+
+.active .left-frills:after {
+    animation: width-to-zero 0.38s ease-out, move-down 0.38s ease-out;
+}
+
+.right-frills {
+    left: 164px;
+    top: 28.5px;
+    margin-left: 570px;
+}
+
+.active .right-frills {
+    animation: move-right 0.38s ease-out, width-to-zero 0.38s ease-out;
+}
+
+.right-frills:before,
+.right-frills:after {
+    right: 15px;
+}
+
+.active .right-frills:before {
+    animation: width-to-zero 0.38s ease-out, move-up 0.38s ease-out;
+}
+
+.active .right-frills:after {
+    animation: width-to-zero 0.38s ease-out, move-down 0.38s ease-out;
+}
+
+.left-frills:before,
+.right-frills:after {
+    transform: rotate(34deg);
+}
+
+.left-frills:after,
+.right-frills:before {
+    transform: rotate(-34deg);
+}
+
+@keyframes move-left {
+    0% {
+        transform: none;
+    }
+    65% {
+        transform: translateX(-80px);
+    }
+    100% {
+        transform: translateX(-80px);
+    }
+}
+
+@keyframes move-right {
+    0% {
+        transform: none;
+    }
+    65% {
+        transform: translateX(80px);
+    }
+    100% {
+        transform: translateX(80px);
+    }
+}
+
+@keyframes width-to-zero {
+    0% {
+        width: 38px;
+    }
+    100% {
+        width: 8px;
+    }
+}
+
+@keyframes move-up {
+    100% {
+        bottom: 69.75px;
+    }
+}
+
+@keyframes move-down {
+    100% {
+        top: 69.75px;
+    }
+}
+
+
+/*会員登録情報コンテンツ　ボタン */
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+}
+
+.btn-orange,
+a.btn-orange {
+    color: #545454;
+    background: rgb(252, 250, 245);
+    /*背景色*/
+    font-size: 2.3rem;
+    width: 25%;
+    height: 96px;
+    margin-bottom: 31px;
+    border-right: 1px solid #F6F6F6;
+    float: left;
+    text-align: center;
+}
+
+.btn-orange:hover,
+a.btn-orange:hover {
+    color: rgba(248, 20, 134, 0.637);
+    background: rgb(252, 250, 245);
+    /*背景色*/
+}
+
+
+/* コンテンツ　リンク　ボタン */
+
+.btn-circle-stitch-blue {
+    font-size: 3.6rem;
+    display: inline-block;
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 190px;
+    height: 190px;
+    line-height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #87befd;
+    border: dashed 5px #FFF;
+    transition: .10s;
+    margin-right: 34px;
+}
+
+.btn-circle-stitch-blue:hover {
+    color: #FFF;
+    background: #668ad8;
+    box-shadow: 0px 0px 0px 5px #668ad8;
+}
+
+.btn-circle-stitch-green {
+    font-size: 3.6rem;
+    display: inline-block;
+    text-decoration: none;
+    background: #a3fd87ef;
+    color: #FFF;
+    width: 190px;
+    height: 190px;
+    line-height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #a3fd87ef;
+    border: dashed 5px #FFF;
+    transition: .10s;
+    margin-right: 34px;
+}
+
+.btn-circle-stitch-green:hover {
+    color: #FFF;
+    background: #279705d3;
+    box-shadow: 0px 0px 0px 5px #279705d3;
+}
+
+.btn-circle-stitch-yellow {
+    font-size: 3.6rem;
+    display: inline-block;
+    text-decoration: none;
+    background: #faf767;
+    color: #FFF;
+    width: 190px;
+    height: 190px;
+    line-height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #faf767;
+    border: dashed 5px #FFF;
+    transition: .10s;
+    margin-right: 34px;
+}
+
+.btn-circle-stitch-yellow:hover {
+    color: #FFF;
+    background: #f1ee0f;
+    box-shadow: 0px 0px 0px 5px #f1ee0f;
+}
+
+.btn-circle-stitch-orange {
+    font-size: 3.6rem;
+    display: inline-block;
+    text-decoration: none;
+    background: #facb67;
+    color: #FFF;
+    width: 190px;
+    height: 190px;
+    line-height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #facb67;
+    border: dashed 5px #FFF;
+    transition: .10s;
+    margin-right: 34px;
+}
+
+.btn-circle-stitch-orange:hover {
+    color: #FFF;
+    background: #f8ab04;
+    box-shadow: 0px 0px 0px 5px#f8ab04;
+}
+
+.btn-circle-stitch-red {
+    font-size: 2.3rem;
+    display: inline-block;
+    text-decoration: none;
+    background: #fa8967;
+    color: #FFF;
+    width: 190px;
+    height: 190px;
+    line-height: 180px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #fa8967;
+    border: dashed 5px #FFF;
+    transition: .10s;
+    margin-right: 34px;
+}
+
+.btn-circle-stitch-red:hover {
+    color: #FFF;
+    background: #f55625;
+    box-shadow: 0px 0px 0px 5px#f55625;
+}
+
+
+/* kaiinjouhou_updateページ以下 
+---------------------------------------------------------------------------*/
+
+.message-user-kaiin {
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 145%;
+    margin-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 0%;
+    text-align: center;
+}
+
+.box1 {
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.sectionHeader {
+    font-size: 180%;
+}
+
+.tourokujouhou {
+    text-align: center;
+}
+
+.add-submit {
+    display: inline-block;
+    max-width: 150px;
+    text-align: center;
+    border: 2px solid#EA1323;
+    font-size: 16px;
+    color: #EA1323;
+    background: none;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 25px;
+    border-radius: 5px;
+    transition: .4s;
+    margin-top: 50px;
+}
+
+.add-submit:hover {
+    background-color: #EA1323;
+    border-color: #e74752;
+    color: #FFF;
+}
+
+.reset-submit {
+    display: inline-block;
+    max-width: 150px;
+    text-align: center;
+    border: 2px solid#4b4a4a;
+    font-size: 16px;
+    color: #4b4a4a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 19px;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.reset-submit:hover {
+    background-color: #4b4a4a;
+    border-color: #726f6f;
+    color: #FFF;
+}
+
+.kaiinjouhou_update_button1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.kaiinjouhou_update_center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* passwordchange
+---------------------------------------------------------------------------*/
+
+.message-user-kaiin {
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 125%;
+    margin-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 0;
+    text-align: center;
+}
+
+input[type=password]:focus {
+    color: #003a6c;
+    background-color: #ffe7d9;
+}
+
+.box1 {
+    font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.form-group row {
+    font-size: 20px;
+}
+
+.form-control {
+    font-size: 20px;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/*ログインフォーム
+---------------------------------------------------------------------------*/
+
+.form {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #9c9c9c;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.label_left {
+    display: inline-block;
+    width: 25%;
+    border-left: solid 5px #5250e0;
+    padding-left: 15px;
+    vertical-align: top;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="email"],
+.form input[type="password"] {
+    /* padding: 4px; */
+    width: 100%;
+    border: 1px solid #ede9e2;
+}
+
+.form textarea {
+    padding: 10px;
+    height: 100px;
+    font-size: 14px;
+    width: 65%;
+}
+
+.form select {
+    height: 35px;
+    width: 65%;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.form input[type="reset"] {
+    background: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+
+/*コンテンツのセンタリング
+---------------------------------------------------------------------------*/
+
+.box {
+    text-align: center;
+}
+
+
+/*スタンプ帳ページ
+---------------------------------------------------------------------------*/
+
+
+/***おしゃれテーブル5ポルカドット ***/
+
+.osare5-table {
+    width: 100%;
+    table-layout: fixed;
+    border: none !important;
+    border-collapse: separate;
+    border-spacing: 4px 4px;
+}
+
+.osare5-table th {
+    border: none !important;
+}
+
+.osare5-table tbody td {
+    border: none !important;
+    background-color: #f0fff0 !important;
+    border-bottom: solid 2px #f9f9f9 !important;
+    background-image: radial-gradient(white 15%, transparent 16%), radial-gradient(white 15%, transparent 16%);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+}
+
+
+/* ヘッダー */
+
+.osare5-table thead th {
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    background: #f6f0ff;
+}
+
+
+/* フッター（比較表と色つけたとき用） */
+
+.osare5-table tfoot td {
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* ボディ項目 */
+
+.table-th-hiragana {
+    border-radius: 5px 5px 5px 5px;
+    background: #fffcf0;
+    font-weight: bold;
+    border-bottom: solid 2px #f9f9f9 !important;
+    line-height: 4.5em;
+}
+
+.table-th-hiragana-space {
+    border-radius: 5px 5px 5px 5px;
+    background: rgb(252, 250, 245);
+    /*背景色*/
+    font-weight: bold;
+    border-bottom: solid 2px #f9f9f9 !important;
+    line-height: 4.5em;
+}
+
+
+/* フッター項目 */
+
+.osare5-table tfoot th {
+    background: none;
+    line-height: 3em;
+    font-weight: bold;
+}
+
+
+/* フッターデータ(フッターがあるときのみ有効) */
+
+.osare5-hikaku tfoot td {
+    border: none !important;
+    background: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+
+/* ボディデータ */
+
+.osare5-table tbody td {
+    text-align: center;
+}
+
+.osare5-table thead th:first-child {
+    background: none;
+}
+
+
+/* 最終行のボーダーをなくす */
+
+.osare5-table tbody tr:last-child th,
+.osare5-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+
+/* スマホ調整 */
+
+@media (max-width: 767px) {
+    .osare5-table thead th,
+    .osare5-table tbody th {
+        padding: 0;
+    }
+    .osare5-table tfoot td {
+        padding: 0;
+        font-size: 0.9em;
+    }
+    .osare5-table tfoot td:nth-child(2) {
+        font-size: 1em;
+    }
+}
+
+
+/* 画像配置調整 */
+
+.stampimghead {
+    text-align: center;
+}
+
+.stampimgline {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* newリボン */
+
+.ribbon19-wrapper {
+    display: block;
+    position: relative;
+    margin: auto;
+    padding: 10px 0;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.ribbon19-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85px;
+    height: 85px;
+    overflow: hidden;
+}
+
+.ribbon19 {
+    display: inline-block;
+    position: absolute;
+    padding: 5px 0;
+    left: -24px;
+    top: 20px;
+    width: 160px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 7px;
+    background: #f10a15;
+    color: #fff;
+    letter-spacing: 0.05em;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 2px rgb(245, 86, 74);
+    border-top: dashed 1px rgba(255, 255, 255, 0.65);
+    border-bottom: dashed 1px rgba(255, 255, 255, 0.65);
+}
+
+
+/*ボタンたち*/
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+}
+
+a.btn--yellow {
+    color: #000;
+    background-color: #fff100;
+    border-bottom: 5px solid #ccc100;
+}
+
+a.btn--yellow:hover {
+    margin-top: 3px;
+    color: #000;
+    background: #fff20a;
+    border-bottom: 2px solid #ccc100;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+}
+
+
+/*印刷するのボタンたち*/
+
+a.btn-malformation1 {
+    font-size: 2rem;
+    padding: 3rem 4rem;
+    color: #fff;
+    border-radius: 100% 80px / 80px 100%;
+    background-color: #fab9c7;
+}
+
+a.btn-malformation1:hover {
+    color: #fff;
+    border-radius: 60% 80% / 100% 80%;
+}
+
+a.btn-malformation2 {
+    font-size: 2rem;
+    padding: 3rem 4rem;
+    color: #fff;
+    border-radius: 100% 80px / 80px 100%;
+    background-color: #9ed0f1;
+}
+
+a.btn-malformation2:hover {
+    color: #fff;
+    border-radius: 60% 80% / 100% 80%;
+}
+
+a.btn-malformation3 {
+    font-size: 2rem;
+    padding: 3rem 4rem;
+    color: #fff;
+    border-radius: 100% 80px / 80px 100%;
+    background-color: #c0eeb2;
+}
+
+a.btn-malformation3:hover {
+    color: #fff;
+    border-radius: 60% 80% / 100% 80%;
+}
+
+a.btn-malformation4 {
+    font-size: 2rem;
+    padding: 3rem 4rem;
+    color: #fff;
+    border-radius: 100% 80px / 80px 100%;
+    background-color: hsl(56, 71%, 77%);
+}
+
+a.btn-malformation4:hover {
+    color: #fff;
+    border-radius: 60% 80% / 100% 80%;
+}
+
+a.btn-malformation5 {
+    font-size: 2rem;
+    padding: 3rem 4rem;
+    color: #fff;
+    border-radius: 100% 80px / 80px 100%;
+    background-color: hsl(293, 49%, 83%);
+}
+
+a.btn-malformation5:hover {
+    color: #fff;
+    border-radius: 60% 80% / 100% 80%;
+}
+
+/*印刷ページのコンテンツチェックボックス*/
+
+.contents {
+    display: inline-block;
+    text-align: center;
+}
+
+table {
+    text-align: center;
+  }
+
+/*印刷ページのコンテンツチェックボックステスト*/
+   
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+input[type='checkbox']{
+  display:none;
+}
+
+.check-container {
+  display:inline-block;
+  position:relative;
+  width: 100px;
+  height:25px;
+}
+
+input[type='checkbox'] + label{
+   z-index:15;
+  position:absolute;
+  left:0px;
+  top:8px;
+  bottom:10px;
+  right:10px;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
+  cursor:pointer;
+  width: 22px;
+  height: 22px;
+  border: 4px solid rgb(241, 200, 224);
+}
+
+.tag {
+  margin-left:25px;/*できたの左側の隙間*/
+}
+
+input[type='checkbox']:checked + label{
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  display:inline-block;
+  width:20px;
+  height:20px;/*どこか分からない＞＜*/
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:#87f09e;
+  border-left-color:transparent;
+transform:rotate(-50deg) translate(5px,-9px);
+
+}
+
+input[type='checkbox']:checked + label:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  height: 15px;
+  width: 100%;  /* or 100px */
+  border-left:4px solid #87f09e;
+}
+
+/*印刷ページのコンテンツ枠の色*/
+.hiraganawaku{
+    border:solid 4px rgb(241, 200, 224);
+}
