@@ -3,8 +3,8 @@
 このメールは、パスワードの再設定を希望するユーザーにお送りしております。<br>
 下記URLからパスワードの再設定を行ってください。</p>
 <p>
-<a href="http://puchihagu_laravel.com/passwordresetform?email={{ $email }}">
-  http://puchihagu_laravel.com/passwordresetform?email={{ $email }}
+<a href="hhttps://puchihagu.herokuapp.com/passwordresetform?email={{ $email }}">
+https://puchihagu.herokuapp.com/passwordresetform?email={{ $email }}
 </a>
 
 </p>
